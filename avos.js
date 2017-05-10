@@ -3,11 +3,10 @@ function formatData(data) {
   var ArrayData = data.split(', ');
   for(var i=0; i<ArrayData.length; i++){
     var singleData = ArrayData[i].split(" ");
-    // console.log(singleData);
-    // console.log(singleData);
     avos.push({ qty:singleData[0]*1,
       price:singleData[2].substring(1)*1});
   }
+  return avos;
 }
 formatData("1 for R3, 2 for R7, 3 for R10, 5 for R14.50");
 /********************************************************/
@@ -42,12 +41,19 @@ function expensiveDeal() {
 }
 expensiveDeal();
 /*********************************************************/
-function avarageDeal() {
+function averageDeal() {
   var priceSum = 0;
   for(var i=0; i<avos.length; i++){
     priceSum += avos[i].price;
   }
-  console.log("A"priceSum/avos.length); // finding average
+  console.log("Avarage price "+priceSum/avos.length); // finding average
   console.log("*********************************************************");
+  return priceSum/avos.length;
 }
-avarageDeal();
+averageDeal();
+module.exports = {
+  "formatData":formatData,
+  "cheapestDeal":cheapestDeal,
+  "expensiveDeal":expensiveDeal,
+  "averageDeal":averageDeal
+};

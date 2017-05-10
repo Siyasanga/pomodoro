@@ -1,0 +1,19 @@
+{
+  "name": "pomodoro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "avos.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Siyasanga/pomodoro.git"
+  },
+  "author": "Siyasanga Mtshokotsha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Siyasanga/pomodoro/issues"
+  },
+  "homepage": "https://github.com/Siyasanga/pomodoro#readme"
+}
